@@ -170,6 +170,7 @@ nav{
 #page2{
      min-height: 100vh;
      width: 100%;
+     background-color: #EFEAE3;
      padding: 8vw 0;
      position: relative;
      /* background-color: red; */
@@ -194,6 +195,9 @@ nav{
 #moving-text h1{
       font-size: 9vw;
       display: inline-block;
+}
+#page-4-parent{
+     background-color: white;
 }
 #gola{
       height: 5vw;
@@ -268,6 +272,7 @@ nav{
 #page3{
       min-height: 100vh;
       width: 100%;
+      background-color: #EFEAE3;
       /* background-color: #EFE9E2; */
       padding: 4vw 0;
      
@@ -449,6 +454,11 @@ nav{
 #para3:hover::before{
 background-color: red;
 }
+#button-parent{
+      background-color: white;
+      padding: 10px;
+      padding-bottom: 5px;
+}
 #button{
       height: 70px;
       width: 220px;
@@ -480,6 +490,7 @@ background-color: red;
 #page6{
       width: 100%;
       height: 60vh;
+      background-color: white;
 
 }
 @media (max-width:1000px) {
@@ -498,7 +509,163 @@ background-color: red;
           overflow: hidden;
      }
      #button{
-           margin-left: 80px;
+           margin-left: 25px;
+           background-color: white;
      }
 
 }
+#page7{
+      width: 100%;
+      height: 100vh;
+}
+#main{
+    position: relative;
+    z-index: 10;
+    /* background-color: #EFEAE3; */
+}
+#footer{
+     position: fixed;
+     height: 100vh;
+     width: 100%;
+     z-index: 9;
+     bottom: 0; 
+     background-color: #000;
+     display: flex;
+    flex-direction: column    ;
+    justify-content: flex-end;
+
+     
+}
+#footer h1{
+      color: white;
+      font-size: 20vw;
+      border-bottom: 2px solid white;
+      margin-left: 20px;
+      margin-bottom: 30px;
+}
+#inside-footer {
+       display: flex;
+       justify-content: space-between;
+       /* border: 3px solid red; */
+       padding: 1vw 10vw;
+}
+#inside-footer  #left{
+      font-size: 4vw;
+      color: white;
+      font-weight: 700;
+}
+#inside-footer #right{
+       border-bottom: 2px solid red;
+       width: 400px;
+}
+
+#inside-footer #right p{
+      
+       color: white;
+       text-align: left; 
+       font-size: 20px;
+}
+#right #right-mid {
+     
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-top: 60px;
+       gap: 250;
+}
+#right #right-mid p{
+       color: gray;
+}
+
+#right-mid i{
+      color: white;
+      font-size: 40px;
+    font-weight: 400;
+}
+#footer-child{
+     position: fixed;
+     z-index: 99;
+      
+       width: 90%;
+       margin-left: 50px;
+}
+.baller{
+       height:20vw;
+      
+      
+      filter: blur(40px);
+      
+       width: 34vw;
+       background-color: red;
+}
+#baller-wrapper{
+       display: flex;
+       position: fixed;
+       z-index: 90;
+       top: 0;
+}
+#ball1{
+       animation-name: move1;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+       animation-duration: 3s;
+}
+#ball2{
+      animation-name: move2;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-duration: 3s;
+}
+#ball3{
+      animation-name: move3;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-duration: 3s;
+}
+@keyframes move1 {
+      from{
+            transform: translate(20%,-20%) skew(0);
+      }
+      to{
+           filter:blur(30px);
+           transform: translate(-10%,10%) skew(-30deg);
+      }
+}
+@keyframes move3 {
+      from{
+            transform: translate(20%,-20%) skew(0);
+      }
+      to{
+           filter:blur(30px);
+           transform: translate(-10%,10%) skew(-30deg);
+      }
+}
+@keyframes move2 {
+      from{
+            transform: translate(20%,-20%) skew(0);
+      }
+      to{
+           filter:blur(30px);
+           transform: translate(-10%,10%) skew(-30deg);
+      }
+}
+@media (max-width:800px){
+       #inside-footer{
+             flex-direction: column;
+             gap: 20px;
+       }
+}
+
+@media (max-width:600px){
+      nav #nav-part2{
+            display: none;
+      }
+      #inside-footer  #left{
+             font-size: 10vw;
+      }
+}
+
+
