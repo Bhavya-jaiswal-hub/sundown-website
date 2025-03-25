@@ -482,3 +482,23 @@ background-color: red;
       height: 60vh;
 
 }
+@media (max-width:1000px) {
+     .page4-child{
+           flex-direction: column;
+           align-items: center;
+     }
+     #page4-right{
+           width: 85%;
+           margin: 20px;
+           border-radius: 20px;
+     }
+     #page4-left{
+          width: 85%;
+          border-radius: 20px;
+          overflow: hidden;
+     }
+     #button{
+           margin-left: 80px;
+     }
+
+}
