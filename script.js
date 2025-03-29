@@ -3,7 +3,9 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-var elemC = document.querySelector(".elem-container")
+
+function Page4Animation(){
+    var elemC = document.querySelector(".elem-container")
 var fixed = document.querySelector("#fixed-image")
 elemC.addEventListener("mouseenter",function(){
     fixed.style.display = "block"
@@ -52,4 +54,37 @@ elem6.addEventListener("mouseenter",function(){
 elem7.addEventListener("mouseenter",function(){
     var image = elem7.getAttribute("data-image")
     fixed.style.backgroundImage = `url(${image})`
+}) 
+}
+
+function swiperAnimation() {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 100,
+       
+      });
+}
+
+var menuopen = document.querySelector("#Menu #open")
+var menuclose = document.querySelector("#Menu #close")
+var screen = document.querySelector("#full-scr") 
+menuopen.addEventListener("click", function(){
+     screen.style.display = "block"
+     menuopen.style.display = "none"
+     menuclose.style.display = "block"
+
+     
 })
+
+menuclose.addEventListener("click",function(){
+     screen.style.display = "none"
+     menuopen.style.display = "block"
+     menuclose.style.display = "none"
+})
+
+
+swiperAnimation()
+Page4Animation()
+
+
